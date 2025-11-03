@@ -1,0 +1,710 @@
+*{
+margin: 0; /* unifica espaçamento */
+padding: 0; /*unifica espaçamento */
+box-sizing: border-box; /* torna o cálculo de tamanhos mais previsível */
+}
+
+#dov {
+display: flex; /* Mantido para organizar o conteúdo em linha */
+justify-content: center; /*Centraliza horizontalmente */
+flex-wrap: wrap; /*Permite que quebre linhas em telas pequenas */
+max-width: 100%; /* Ajustado para ocupar até 100% da tela */
+height: auto; /* Para que o conteúdo cresça conforme necessário */
+}
+
+h4 {
+font-family: Arial, sans-serif;
+text-align: center;
+background-color: #ffee00;
+font-size: 20px;
+margin-top: 15px;
+width: 99%;
+border-radius: 10px;
+}
+
+table {
+width: 100%;
+margin-top: 30px;
+border-collapse: collapse;
+text-align: center;
+}
+
+table, td {
+border: 1px solid #ddd;
+padding: 10px;
+border-collapse: separate;
+}
+
+td {
+text-align: center;
+background-color: #ffee00;
+}
+
+.container-patrocinadores {
+  display: flex;             /* Liga o modo de alinhamento flexível */
+  justify-content: space-around; /* Distribui os itens com espaço igual ao redor */
+  align-items: flex-start;   /* Alinha os itens no topo */
+  flex-wrap: wrap;           /* Permite que os itens quebrem para a próxima linha em telas pequenas */
+  gap: 20px;                 /* Cria um espaço entre os patrocinadores */
+  margin-top: 30px;          /* Adiciona um espaço acima da seção */
+  padding: 10px;
+}
+
+/* Cada bloco de patrocinador (imagem + texto) */
+.patrocinador {
+  flex: 1 1 30%;             /* Cria a grade de 3 colunas */
+  max-width: 250px;          /* Define uma largura máxima para cada patrocinador */
+  text-align: center;        /* Centraliza o texto e a imagem */
+  display: flex;
+  flex-direction: column;    /* Coloca a imagem em cima e o texto embaixo */
+  align-items: center;
+  background-color: #ffee00;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
+
+/* Estilo para as imagens dos patrocinadores */
+.patrocinador img {
+  width: 100%;               /* Faz a imagem ocupar 100% da largura do contêiner 'patrocinador' */
+  height: 200px;             /* Define uma ALTURA FIXA para todas as imagens */
+  object-fit: contain;       /* Garante que a imagem apareça inteira, sem distorcer ou cortar */
+  margin-bottom: 10px;       /* Cria um espaço entre a imagem e o texto */
+}
+
+/* Estilo para o nome do patrocinador */
+.patrocinador p {
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  background-color: #ffee00; /* Mesma cor de fundo dos outros textos */
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: 100%;
+}
+
+/* --- AJUSTE PARA CELULAR --- */
+@media (max-width: 768px) {
+  .container-patrocinadores {
+    flex-direction: column;   /* Em telas pequenas, coloca os patrocinadores um embaixo do outro */
+    align-items: center;      /* Centraliza os blocos na tela */
+  }
+
+  .patrocinador {
+    width: 80%;               /* Faz o bloco ocupar 80% da largura da tela */
+    max-width: 300px;
+  }
+}
+.container-patrocinadores img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+.container-rifas {
+  display: flex;             /* Liga o modo de alinhamento flexível */
+  justify-content: space-around; /* Distribui os itens com espaço igual ao redor */
+  align-items: flex-start;   /* Alinha os itens no topo */
+  flex-wrap: wrap;           /* Permite que os itens quebrem para a próxima linha em telas pequenas */
+  gap: 20px;                 /* Cria um espaço entre os patrocinadores */
+  margin-top: 30px;          /* Adiciona um espaço acima da seção */
+  padding: 10px;
+}
+figure{
+    text-align: center;
+    }
+figcaption{
+    font-style: italic;
+    background-color: #ffee00;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+.container-rifas img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+/* Cada bloco de rifas (imagem + texto) */
+.rifasI {
+  flex: 1 1 30%;             /* Cria a grade de 3 colunas */
+  max-width: 250px;          /* Define uma largura máxima para cada patrocinador */
+  text-align: center;        /* Centraliza o texto e a imagem */
+  display: flex;
+  flex-direction: column;    /* Coloca a imagem em cima e o texto embaixo */
+  align-items: center;
+}
+
+/* Estilo para as imagens dos patrocinadores */
+.rifasI img {
+  width: 100%;               /* Faz a imagem ocupar 100% da largura do contêiner 'patrocinador' */
+  height: 200px;             /* Define uma ALTURA FIXA para todas as imagens */
+  object-fit: contain;       /* Garante que a imagem apareça inteira, sem distorcer ou cortar */
+  margin-bottom: 10px;       /* Cria um espaço entre a imagem e o texto */
+}
+
+/* --- AJUSTE PARA CELULAR --- */
+@media (max-width: 768px) {
+  .container-rifas {
+    flex-direction: column;   /* Em telas pequenas, coloca os patrocinadores um embaixo do outro */
+    align-items: center;      /* Centraliza os blocos na tela */
+  }
+
+  .rifasI {
+    width: 80%;               /* Faz o bloco ocupar 80% da largura da tela */
+    max-width: 300px;
+  }
+}
+
+.carousel-inner{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    max-width: 600px;
+}
+
+.carousel-item {
+    width: 99%;
+    flex: 0 0 100%;
+}
+body {
+min-height: 100vh;
+margin: 0;
+padding: 0;
+background-image: url(../parede.jpg);
+background-position: center;
+background-size: none; /* se quiser a imagem de fundo ocupando toda a tela */
+}
+
+ .agradecimento {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-family: Arial, sans-serif;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  border-radius: 99px;
+} 
+
+ .manifesto {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-style: italic;
+  width: 99%;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+ .batalha {
+        text-align: center;
+        justify-content: center;
+        display: flex;
+        font-style: italic;
+        width: 99%;
+        border-radius: 8px;
+ }
+ .carousel-control-next {
+    background-color: #ffee00;
+ }
+ .carousel-control-prev {
+    background-color: #ffee00;
+ }
+
+ .resistencia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+
+ }
+ .resistencia strong {
+display: block;
+margin-bottom: 10px;
+background-color: #ffee00;
+font-style: italic;
+}
+ .resistencia button {
+padding: 10px;
+font-size: 16px;
+background-color: #ffee00;
+color: #030303;
+border: none;
+cursor: pointer;
+border-radius: 5px;
+font-style: italic;
+height: 35px;
+}
+ .resistencia button:hover {
+    background-color: #ffee00;
+    transform: scale(1.05);
+    transition: transform 0.3s;
+ }
+
+ /* Estilo dos títulos */
+.paragrafo h2.titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+    cursor: pointer; /* Muda o cursor para indicar que é interativo */
+    transition: color 0.3s ease; /* Transição suave para cor */
+}
+
+/* ---------- PARÁGRAFO / CAIXA DE TEXTO ---------- */
+.paragrafo {
+font-family: Arial, sans-serif;
+text-align: justify;
+background-color: var(--accent-yellow);
+font-size: 19px; /* corrigido: não usar vw */
+width: 99%;
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+border-radius: 8px;
+}
+
+.paragrafo p.conteudo {
+display: none; /* mantém comportamento inicial */
+font-size: 16px;
+line-height: 1.5;
+color: #000000;
+background-color: var(--muted-bg);
+border-radius: 8px;
+padding: 10px;
+background-color: #ffee00;
+border-radius: 10px;
+padding: 5px 10px;
+width: fit-content;
+}
+
+/* hover no título (mantive) */
+.paragrafo h2.titulo:hover {
+color: #fd0101;
+}
+
+/* regra genérica para parágrafos soltos (ajustada) */
+p{
+font-family: Arial, sans-serif;
+text-align: justify; /* manter uniformidade */
+background-color: var(--accent-yellow);
+font-size: 19px;
+max-width: 800px;
+margin: 0 auto;
+padding: 20px;
+border-radius: 8px;
+}
+
+/* ---------- CONTAINER PRINCIPAL COM IMAGENS E CONTEÚDO ---------- */
+.container-completo {
+max-width: var(--container-max);
+margin: 0 auto;
+display: flex;
+flex-wrap: wrap; /* permite responsividade */
+justify-content: space-between;
+align-items: flex-start;
+gap: var(--gap);
+padding: 40px;
+box-sizing: border-box;
+}
+
+/* imagem lateral: cria um espaço fixo, mas responsivo */
+.imagem-lateral {
+flex: 0 0 250px; /* largura fixa preferida */
+max-width: 100%;
+width: 250px;
+height: 250px; /* força proporção (quadrada) */
+object-fit: cover; /* recorta mantendo centralidade */
+border-radius: var(--card-radius);
+display: block;
+overflow: hidden;
+}
+
+/* se quiser que logos não sejam cortados, adicione .imagem-lateral.logo { object-fit: contain; background:#fff; } */
+
+.fundos {
+border-radius: 50px;
+margin-top: 25px;
+max-width: 100%;
+overflow: hidden;
+}
+
+/* ---------- INFO/DOWNLOAD & COLUNAS ---------- */
+.info-download {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: flex-start;
+gap: var(--gap);
+padding: 20px;
+box-sizing: border-box;
+width: 100%;
+}
+
+.texto {
+  flex: 2 1 400px;
+  min-width: 250px;
+  background-color: #ffee00;
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: fit-content;
+}
+
+.texto p {
+text-align: justify;
+line-height: 1.6;
+margin-bottom: 16px;
+}
+
+.lado-direito {
+flex: 1 1 220px;
+min-width: 200px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+/* imagem manual agora responsiva e mantendo proporção */
+.imagem-manual {
+width: 100%;
+max-width: 300px;
+height: auto;
+aspect-ratio: 4 / 3; /* navegador moderno usa isso */
+object-fit: cover;
+border-radius: 8px;
+margin-bottom: 10px;
+}
+
+/* botão com contraste melhor e padding consistente */
+.botao-fumar {
+background-color: #4CAF50;
+color: #fff; /* alterado para contraste */
+padding: 12px 18px;
+text-decoration: none;
+border-radius: 8px;
+font-weight: bold;
+transition: background-color 0.3s ease;
+}
+
+.botao-fumar:hover {
+background-color: #388e3c;
+}
+
+.link-email {
+color: #4CAF50;
+text-decoration: none;
+font-weight: bold;
+}
+
+.link-email:hover {
+text-decoration: underline;
+}
+
+/* ---------- LAYOUT DE LISTA E CAIXA DE IMAGEM (outra seção) ---------- /
+/ Limpei o comentário inválido que havia no seu CSS original */
+
+.container-principal {
+display: flex;
+flex-wrap: wrap;
+align-items: flex-start;
+justify-content: space-between;
+margin-top: 20px;
+gap: var(--gap);
+}
+
+.caixa-imagem {
+flex: 1 1 420px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.caixa-imagem img {
+width: 100%;
+max-width: 500px;
+height: auto;
+max-height: 400px; /* evita imagens gigantes */
+object-fit: cover;
+border-radius: 10px;
+display: block;
+}
+
+.caixa-lista {
+flex: 1 1 300px;
+display: flex;
+align-items: flex-start;
+justify-content: center;
+gap: 16px;
+}
+
+.caixa-lista h3 {
+background-color: var(--accent-yellow);
+padding: 10px;
+border-radius: 8px;
+}
+
+.caixa-lista ol {
+padding-left: 20px;
+background-color: var(--muted-bg);
+padding: 15px;
+border-radius: 8px;
+}
+
+/* estilo para "Outras" */
+.Outras{
+background-color: var(--accent-yellow);
+padding: 10px;
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* ---------- MEDIA QUERIES (responsividade) ---------- */
+@media (max-width: 1024px) {
+.imagem-lateral {
+width: 200px;
+height: 200px;
+flex: 0 0 200px;
+}
+
+.caixa-imagem img {
+max-height: 320px;
+}
+}
+
+@media (max-width: 768px) {
+.container-completo {
+flex-direction: column;
+align-items: center;
+padding: 20px;
+gap: 20px;
+}
+
+.imagem-lateral {
+width: 90%;
+max-width: 320px;
+height: auto; /* deixa a altura natural no celular */
+aspect-ratio: 4/3;
+}
+
+.paragrafo {
+font-size: 16px;
+padding: 10px;
+}
+
+.container-principal, .info-download {
+flex-direction: column;
+gap: 16px;
+}
+
+.caixa-imagem {
+margin-right: 0;
+}
+}
+
+#contador-titulo {
+  text-align: center;          /* Alinha texto à esquerda */
+  margin-left: 0 auto;            /* Gruda na esquerda do container */
+  margin-right: 100px;
+  font-style: italic;
+  background-color: #ffee00;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+#timer {
+
+  font-size: 2.7em;         /* Torna os números grandes: ajuste como desejar */
+  font-weight: bold;        /* Destaque igual ao visual da imagem */
+  color: #45f300;              /* Fica bem nítido sobre o fundo branco */
+  letter-spacing: 7px;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin-top: 75px;
+  margin-right: 75px;
+  background-color: #ffee00;
+  border-radius: 10px;
+  padding: 8px 16px;
+  color: #222;
+  display: inline-block;
+
+}
+
+.tema-evento {
+    background-color: #f6e05e;
+    color: #143d24;
+    border-radius: 60px;
+    padding: 12px 0;
+    font-size: 1.2em;
+    text-align: center;
+    margin-left: 50px;
+    margin-top: 35px;
+    margin-right: 0 ;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    font-weight: bold;
+}
+
+
+.event {
+    list-style: none;
+    padding: 0;
+    margin-right: 175px;
+    text-align: center;
+    font-size: 1.1em;
+    color: #3bb7d6;
+    background-color: #f6e05e;
+    color: #143d24;
+    border-radius: 60px;
+}
+
+.events li {
+    margin: 200px 0;
+    font-weight: bold;
+}
+
+#contato-footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #36c450;
+  padding: 35px 0;
+  gap: 45px;
+}
+
+.footer-coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+}
+
+.icon-main {
+  width: 48px;
+  height: 48px;
+  filter: grayscale(1) brightness(99);
+  transition: filter .2s;
+}
+
+.icon-main:hover {
+  filter: none;
+}
+
+.icon-pix {
+  width: 28px;
+  height: 28px;
+  opacity: 0.75;
+  vertical-align: middle;
+}
+
+@media (max-width: 900px) {
+  #contato-footer {
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+  }
+}
+
+
+.white-box {
+  width: 1100px;    /* ou o valor equivalente ao do retângulo azul da imagem */
+  height: 300px;   /* ajuste conforme o modelo */
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 32px 36px;
+}
+
+.icons-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  margin-right: 90px;
+}
+
+.marcha-image {
+  flex: 0 0 250px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 100%;
+}
+.marcha-image img {
+  width: 600px;
+  height: 275px;
+  border-radius: 15px;
+  box-shadow: 0 1px 7px rgba(0,0,0,0.09);
+}
+
+.icon-grid {
+  /* 3 colunas por 2 linhas */
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-gap: 48px 36px;
+  justify-content: center;
+}
+
+.icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* quadrado vermelho dos ícones */
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 7px rgba(238, 7, 7, 0.08);
+  transition: .99s;
+}
+.icon-link:hover {
+  background: #B92F2F; /* tom mais escuro ao passar o mouse */
+}
+
+/* ícone dentro do quadrado */
+.icon-link img {
+  width: 40px;
+  height: 40px;
+}
+
+.desc-link {
+  margin-top: 2px;
+  color: #246DC7;        /* Azul chamativo para o link */
+  font-size: 1rem;
+  text-decoration: underline;
+  transition: color .2s;
+  font-weight: 500;
+}
+.desc-link:hover {
+  color: #133a5f;
+}
+
+@media (max-width: 650px) {
+  .icon-grid {
+    grid-template-columns: repeat(2, 110px);
+    grid-gap: 32px 18px;
+  }
+}
+
+.desc-link2 {
+  color: #246DC7;        /* Azul chamativo para o link */
+  font-size: 1rem;
+  text-decoration: underline;
+  transition: color .2s;
+  font-weight: 500;
+  margin-left: 25px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  background-color: #ffee00;
+  border-radius: 10px;
+  padding: 5px 10px;
+  width: fit-content;
+}
