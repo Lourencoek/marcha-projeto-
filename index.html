@@ -9,10 +9,9 @@
     <title>Marcha da Maconha Diadema </title>
 </head>
 <body>
-<!-- Imagem principal da Marcha  -->
-   <!-- Crie uma "caixa" principal para alinhar a imagem e a lista -->
+   <!-- Caixa principal para alinhar a imagem e temporizador-->
 <div class="container-principal">
-    <!-- Caixa da Imagem (Esquerda) -->
+    <!-- Imagem principal da Marcha  -->
     <div class="caixa-imagem">
         <img src="imagens da marcha/marcha da maconha principal.png" alt="Manifestantes na Marcha da Maconha">
     </div>
@@ -21,23 +20,33 @@
     <h2 class="contador-titulo">Contagem regressiva até a marcha</h2>
     <div id="timer"></div>
     </div>
-    <div class="tema-evento">
-    <strong>Tema 2025:</strong> Legaliza o remédio natural, maconha no SUS e no quintal
-  </div>
-  <!-- Lista com outras informações -->
-  <ul class="event">
-    <li>Data: 22 de novembro de 2025</li>
-    <li>Concentração: Terminal Diadema - SP</li>
-    <li>Horário: 14h</li>
-  </ul>
-</div>
-</div>
+   <!-- Animações de tema data, Horario Local  -->
+     <div class="info-grid-wrapper"> 
+        <div class="info-box" id="box-tema">
+            <span class="capa">Tema 2025:</span>
+            <span class="conteudo">Legaliza o remédio natural, maconha no SUS e no quintal</span>
+        </div>
+        <div class="info-box" id="box-data">
+            <span class="capa">Quando será?</span>
+            <span class="conteudo">22 de novembro de 2025</span>
+        </div>
+        <div class="info-box" id="box-local">
+            <span class="capa">Ponto de Encontro</span>
+            <span class="conteudo">CONCENTRAÇÃO: Terminal Diadema - SP</span>
+        </div>
+        <div class="info-box" id="box-horario">
+            <span class="capa">Que horas?</span>
+            <span class="conteudo">HORÁRIO: 14h</span>
+        </div>
+    </div>
+    <!-- 👆 Aquelas mudanças que fizemos 👆 -->
+
+</div> <!-- começo do esconde esconde -->
 <!-- Manifesto e importancia do Hip Hop -->
     <div>
     <h4 class="manifesto"><strong>Manifesto pelo direito de conhecer a potência da maconha e a cultura de aquilombamento, além de auxiliar na desestruturação racista que retarda nosso desenvolvimento social e econômico. Lutamos pelo fim do encarceramento da juventude negra e do genocídio cometido pela guerra às drogas.</strong></h4>
     <div class="container-completo">
-      <img src="imagens da marcha/shared image.jpg" class="imagem-lateral esquerda" alt="Imagem esquerda">
-    
+      <img src="imagens da marcha/Punho_marcha.webp" class="imagem-lateral esquerda" alt="Imagem esquerda">
       <div class="paragrafo">
         <!-- Manifesto dividido por partes -->
         <h2 class="titulo" onclick="toggleTexto(this)">Manifesto por Diadema, pela cultura, pela liberdade!</h2>
@@ -49,13 +58,13 @@
         <h2 class="titulo" onclick="toggleTexto(this)">Marcha da Maconha em Diadema é educação, consciência e reparação</h2>
         <p class="conteudo"><strong>Com base na nossa história, buscamos dialogar com os grupos das batalhas de rap e dos sistemas de som (bailes), levando informação sobre a planta e sobre as raízes dos nossos problemas estruturais. É hora de reconhecer a potência da maconha e da cultura de aquilombamento como ferramentas de transformação.</strong></p>
       </div>
-    <!-- imagem dos lados -->
+    <!-- Aqui termina o manifesto -->
     </div>
 <!-- Texto "Agradecimento patrocinadores Marcha de 2024" -->
 <div class="agradecimento">
 <h4><strong>Agradecimento especial aos patrocinadores que contribuíram de forma muito significativa para a marcha de Diadema de 2024:</strong></h4>
 </div>
-<!-- Imagens "Imagens e instagram dos patrocinadores Marcha de 2024" -->
+<!-- Imagens e instagram dos patrocinadores Marcha de 2024" -->
 <div class="container-patrocinadores">
     <div class="patrocinador">
   <figure>
@@ -75,9 +84,9 @@
   <figcaption><strong>Poseidon</strong></figcaption>
   </figure>
   </div>
-<!-- Fig são a descrição da imagem " -->
+<!-- Fig é a descrição da imagem " -->
 </div>
-<!-- Fotos e agradecimento aos participantes da Marcha 2024  1 até 7-->
+<!-- Fotos da Marcha 2024  1 até 7-->
 <h4><strong>A realização da Marcha da Maconha em Diadema só foi possível graças ao esforço coletivo de todos os apoiadores e apoiadoras que acreditaram na importância dessa luta. Cada contribuição – seja na organização, na divulgação ou na presença no evento – foi fundamental para darmos visibilidade a uma pauta tão urgente e necessária para nossa cidade!</strong></h4>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
@@ -118,49 +127,43 @@
 <h4><strong>Para arrecadar fundos, a Marcha da Maconha de Diadema promoveu duas rifas com prêmios incríveis no valor de R$4,20 qualquer nome. Os ganhadores foram anunciados no Instagram da <a href="https://www.instagram.com/reel/DIC8IKrMOD-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">Marcha</a> no dia 04/04/2025</strong></h4>
  </div>
     <div class="container-rifas">
-    <div class="sorte">
+    <div class="rifa">
         <figure>
-       <a href="https://www.instagram.com/marchadamaconhadiadema/p/DDsf8XWS2cH/"><img src="imagens da marcha/rifa_marcha.webp" alt="Óleo CBD"></a>
-       <figcaption><strong>??????????????</strong></strong></figcaption>
+       <a href="https://www.instagram.com/marchadamaconhadiadema/p/DDsf8XWS2cH/"><img src="imagens da marcha/Oleo-CBD-ilustrativo.webp" alt="Óleo CBD"></a>
+       <figcaption><strong>Óleo ilustrativo</strong></strong></figcaption>
         </figure>
     </div>
-     <div class="sorte">
+     <div class="rifa">
         <figure>
-       <a href="https://www.instagram.com/p/DDsf8XWS2cH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="imagens da marcha/rifa_marcha.webp" alt="Camisa da Marcha da Maconha de Diadema 2024"></a>
-        <figcaption><strong>???????????</strong></figcaption>
+       <a href="https://www.instagram.com/p/DDsf8XWS2cH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="imagens da marcha/camisa marcha.jpg" alt="Camisa da Marcha da Maconha de Diadema 2024"></a>
+        <figcaption><strong>Camisa Marcha 2024</strong></figcaption>
         </figure>
      </div>
-      <div class="sorte">
+      <div class="rifa">
         <figure>
-       <a href="https://www.instagram.com/p/DDsf8XWS2cH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="imagens da marcha/rifa_marcha.webp" alt="Bong de Vidro"></a>
-        <figcaption><strong>??????????????</strong></figcaption>
+       <a href="https://www.instagram.com/p/DDsf8XWS2cH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="><img src="imagens da marcha/bong marcha.jpg" alt="Bong de Vidro"></a>
+        <figcaption><strong>camisa+bong</strong></figcaption>
         </figure>
       </div>
     </div>
-    <!-- Rifas atualizadas 2025 -->
+    <!-- Rifas2 atualizadas 2025 -->
  <div class = "fundos">
 <h4><strong>Para ajudar nas despesas da Marcha da Maconha de Diadema, organizamos uma rifa totalmente online, acessível para todo mundo!
 Basta clicar na imagem abaixo ou acompanhar pelo link exclusivo da nossa rifa personalizada:<a href="https://www.rifapersonalizada.com.br/">RIFA</a> no dia 22/11/2025</strong></h4>
  </div>
-    <div class="container-rifas">
-    <div class="sorte">
+    <div class="container-rifas2">
+    <div class="rifa2">
         <figure>
-       <a href="https://www.rifapersonalizada.com.br/"><img src="imagens da marcha/rifa_marcha.webp" alt="Óleo CBD"></a>
-       <figcaption><strong>??????????????</strong></strong></figcaption>
+       <a href="http://rifapersonalizada.com.br/rifa-marcha-diadema-i6Cmrx"><img src="imagens da marcha/rifa_marcha.webp" alt="Óleo CBD"></a>
+       <figcaption><strong>Trança Nagô + Filtro dos Sonhos</strong></strong></figcaption>
         </figure>
     </div>
-     <div class="sorte">
+     <div class="rifa2">
         <figure>
-       <a href="https://www.rifapersonalizada.com.br/"><img src="imagens da marcha/rifa_marcha.webp" alt="Camisa da Marcha da Maconha de Diadema 2024"></a>
-        <figcaption><strong>???????????</strong></figcaption>
+       <a href="http://rifapersonalizada.com.br/rifa-marcha-diadema-i6Cmrx"><img src="imagens da marcha/camisetasmarcha.webp" alt="Camisa da Marcha da Maconha de Diadema 2025"></a>
+        <figcaption><strong>Camisa da Marcha 2025</strong></figcaption>
         </figure>
      </div>
-      <div class="sorte">
-        <figure>
-       <a href="https://www.rifapersonalizada.com.br/"><img src="imagens da marcha/rifa_marcha.webp" alt="Bong de Vidro"></a>
-        <figcaption><strong>??????????????</strong></figcaption>
-        </figure>
-      </div>
     </div>
 
 <!-- Agradecimento final e 3* edição da marcha em 2025 -->
@@ -184,6 +187,7 @@ Basta clicar na imagem abaixo ou acompanhar pelo link exclusivo da nossa rifa pe
     <a href="arquivos/zine_defesa_quebrada.pdf" download class="botao-fumar">🚬 Fumar</a>
   </div>
 </div>
+<!-- Imagem principal da Marcha no Footer do site  -->
 <footer id="contato-footer">
   <div id="main-container">
    <div class="white-box">
@@ -192,42 +196,42 @@ Basta clicar na imagem abaixo ou acompanhar pelo link exclusivo da nossa rifa pe
   </div>
   <div class="icon-section">
   <div class="icon-grid">
-    <!-- Item 1 -->
+    <!-- Instagram marcha 2025 Icone  -->
     <div class="icon-item">
       <a href="https://www.instagram.com/marchadamaconhadiadema?igsh=MXR6Z3g0ZTk5cWF6cg==" class="icon-link">
         <img src="icones/instagram.svg" alt="Instagram">
       </a>
       <a href="link1.html" class="desc-link">Instagram</a>
     </div>
-    <!-- Item 2 -->
+    <!-- Gmail da marcha 2025 -->
     <div class="icon-item">
       <a href="link2.html" class="icon-link" aria-label="Descrição 2">
         <img src="icones/gmail.svg" alt="Gmail da Marcha">
       </a>
       <a href="marchadamaconha@gamil.com" class="desc-link">Gmail</a>
     </div>
-    <!-- Item 3 -->
+    <!-- Link com icone para o whats da marcha 2025 -->
     <div class="icon-item">
       <a href="https://chat.whatsapp.com/Iz4Sl16ESvvBbysDOfrukr?mode=wwt" class="icon-link" aria-label="Descrição 3">
         <img src="icones/whatsapp.svg" alt="Grupo whatsapp">
       </a>
       <a href="link3.html" class="desc-link">Grupo whatsapp</a>
     </div>
-    <!-- Item 4 -->
+    <!-- Formulario dos Artistas de Diadema -->
     <div class="icon-item">
       <a href="link4.html" class="icon-link" aria-label="Descrição 4">
         <img src="icones/form.svg" alt="Formulario para participar como artista na marcha">
       </a>
       <a href="link4.html" class="desc-link2">Formulario Artistas</a>
     </div>
-    <!-- Item 5 -->
+    <!-- Pix da marcha 2025 icone  -->
     <div class="icon-item">
       <a href="link5.html" class="icon-link" aria-label="Descrição 5">
         <img src="icones/pix.svg" alt="Pix da marcha">
       </a>
       <a href="link5.html" class="desc-link">Pix</a>
     </div>
-    <!-- Item 6 -->
+    <!-- Git Hub escondido -->
     <div class="icon-item">
       <a href="link6.html" class="icon-link" aria-label="Descrição 6">
         <img src="icones/github.svg" alt="Git sairu">
@@ -238,6 +242,8 @@ Basta clicar na imagem abaixo ou acompanhar pelo link exclusivo da nossa rifa pe
 </div>
 
 </footer>
+  <!-- Scripts das funções esconde, tempo e baixar -->
+  <script src="js/script.js"></script>
   <script src="js/esconde_esconde.js"></script>
   <script src="js/timer.js"></script>
 </body>

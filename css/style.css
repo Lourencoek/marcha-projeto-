@@ -1,15 +1,119 @@
+/* Começo do site para alinhar e organizar  */
 *{
 margin: 0; /* unifica espaçamento */
 padding: 0; /*unifica espaçamento */
 box-sizing: border-box; /* torna o cálculo de tamanhos mais previsível */
 }
 
-#dov {
-display: flex; /* Mantido para organizar o conteúdo em linha */
-justify-content: center; /*Centraliza horizontalmente */
-flex-wrap: wrap; /*Permite que quebre linhas em telas pequenas */
-max-width: 100%; /* Ajustado para ocupar até 100% da tela */
-height: auto; /* Para que o conteúdo cresça conforme necessário */
+/* configurações  do nosso corpo site  */
+body {
+min-height: 100vh;
+margin: 0;
+padding: 0;
+background-image: url(../parede.jpg);
+background-position: center;
+background-size: none; /* se quiser a imagem de fundo ocupando toda a tela */
+}
+
+/* ---------- LAYOUT DA IMAGEM PRINCIPAL ---------- */
+
+.container-principal {
+display: flex;
+flex-wrap: wrap;
+align-items: flex-start;
+justify-content: space-between;
+margin-top: 20px;
+gap: var(--gap);
+}
+
+.caixa-imagem {
+flex: 1 1 420px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.caixa-imagem img {
+width: 100%;
+max-width: 500px;
+height: auto;
+max-height: 400px; /* evita imagens gigantes */
+object-fit: cover;
+border-radius: 10px;
+display: block;
+}
+
+/* --- AJUSTE PARA CELULAR PUNHO --- */
+@media (max-width: 1024px) {
+.imagem-lateral {
+width: 200px;
+height: 200px;
+flex: 0 0 200px;
+}
+
+.caixa-imagem img {
+max-height: 320px;
+}
+}
+/* --- AJUSTE PARA CELULAR MANIFESTO--- */
+@media (max-width: 768px) {
+.container-completo {
+flex-direction: column;
+align-items: center;
+padding: 20px;
+gap: 20px;
+}
+
+.imagem-lateral {
+width: 90%;
+max-width: 320px;
+height: auto; /* deixa a altura natural no celular */
+aspect-ratio: 4/3;
+}
+
+.paragrafo {
+font-size: 16px;
+padding: 10px;
+}
+
+.container-principal, .info-download {
+flex-direction: column;
+gap: 16px;
+}
+
+.caixa-imagem {
+margin-right: 0;
+}
+}
+
+#contador-titulo {
+  text-align: center;          /* Alinha texto à esquerda */
+  margin-left: 0 auto;            /* Gruda na esquerda do container */
+  margin-right: 100px;
+  font-style: italic;
+  background-color: #ffee00;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+
+/* ---- LAYOUT DA CONTAGEM REGRESSIVA ---------*/
+#timer {
+
+  font-size: 2.7em;         /* Torna os números grandes: ajuste como desejar */
+  font-weight: bold;        /* Destaque igual ao visual da imagem */
+  color: #45f300;              /* Fica bem nítido sobre o fundo branco */
+  letter-spacing: 7px;
+  text-align: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin-top: 75px;
+  margin-right: 75px;
+  background-color: #ffee00;
+  border-radius: 10px;
+  padding: 8px 16px;
+  color: #222;
+  display: inline-block;
+
 }
 
 h4 {
@@ -40,6 +144,7 @@ text-align: center;
 background-color: #ffee00;
 }
 
+/* ---- LAYOUT DOS PATROCINADORES ---------*/
 .container-patrocinadores {
   display: flex;             /* Liga o modo de alinhamento flexível */
   justify-content: space-around; /* Distribui os itens com espaço igual ao redor */
@@ -81,7 +186,7 @@ background-color: #ffee00;
   width: 100%;
 }
 
-/* --- AJUSTE PARA CELULAR --- */
+/* --- AJUSTE PARA CELULAR PATROCINADORES --- */
 @media (max-width: 768px) {
   .container-patrocinadores {
     flex-direction: column;   /* Em telas pequenas, coloca os patrocinadores um embaixo do outro */
@@ -97,7 +202,22 @@ background-color: #ffee00;
     transform: scale(1.05);
     transition: transform 0.3s;
 }
+
+/* ---- LAYOUT DAS RIFAS DE 2024 ---------*/
 .container-rifas {
+  display: flex;
+  justify-content: space-around;    /* distribui em espaço igual os itens  */
+  align-items: flex-start;           /* alinha no topo  */ 
+  flex-wrap: wrap;                    /* permite que o item quebre para proxima linha em telas pequenas  */  
+  border-radius: 60px;
+  padding: 10px 10px;
+}
+
+.container-rifas .rifa img {
+  width: 100%;
+  height: auto;          /* mantém proporção */
+  max-height: 300px;     /* limita altura máxima (ajuste) */
+  object-fit: contain;   /* contém a imagem inteira; use 'cover' para preencher e cortar */
   display: flex;             /* Liga o modo de alinhamento flexível */
   justify-content: space-around; /* Distribui os itens com espaço igual ao redor */
   align-items: flex-start;   /* Alinha os itens no topo */
@@ -105,7 +225,41 @@ background-color: #ffee00;
   gap: 20px;                 /* Cria um espaço entre os patrocinadores */
   margin-top: 30px;          /* Adiciona um espaço acima da seção */
   padding: 10px;
+  transition: transform 0.3s;
+  background-color: #ffee00;
 }
+
+/* ---- LAYOUT DAS RIFAS DE 2025 ---------*/
+.container-rifas2 .rifa2 img {
+  width: 100%;
+  height: auto;          /* mantém proporção */
+  max-height: 500px;     /* limita altura máxima (ajuste) */
+  object-fit: contain;   /* contém a imagem inteira; use 'cover' para preencher e cortar */
+  display: flex;             /* Liga o modo de alinhamento flexível */
+  justify-content: space-around; /* Distribui os itens com espaço igual ao redor */
+  align-items: flex-start;   /* Alinha os itens no topo */
+  flex-wrap: wrap;           /* Permite que os itens quebrem para a próxima linha em telas pequenas */
+  gap: 0;                 /* Cria um espaço entre  */
+  margin-top: 30px;          /* Adiciona um espaço acima da seção */
+  padding: 5px;
+  background-color: #ffee00;
+}
+
+.container-rifas2 {
+  display: flex;
+  justify-content: space-around;    /* distribui em espaço igual os itens  */
+  align-items: flex-start;           /* alinha no topo  */ 
+  flex-wrap: wrap;                    /* permite que o item quebre para proxima linha em telas pequenas  */  
+  border-radius: 60px;
+  padding: 10px 10px;
+  transition: transform 0.3s;
+}
+
+.container-rifas2 img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+/* ---- LAYOUT DAS RIFAS DE 2025 ---------*/
 figure{
     text-align: center;
     }
@@ -115,42 +269,42 @@ figcaption{
     margin-top: 15px;
     border-radius: 10px;
 }
-.container-rifas img:hover {
+.container-rifas .rifa img:hover {
     transform: scale(1.05);
     transition: transform 0.3s;
 }
 
-/* Cada bloco de rifas (imagem + texto) */
-.rifasI {
-  flex: 1 1 30%;             /* Cria a grade de 3 colunas */
-  max-width: 250px;          /* Define uma largura máxima para cada patrocinador */
-  text-align: center;        /* Centraliza o texto e a imagem */
-  display: flex;
-  flex-direction: column;    /* Coloca a imagem em cima e o texto embaixo */
-  align-items: center;
-}
-
-/* Estilo para as imagens dos patrocinadores */
-.rifasI img {
-  width: 100%;               /* Faz a imagem ocupar 100% da largura do contêiner 'patrocinador' */
-  height: 200px;             /* Define uma ALTURA FIXA para todas as imagens */
-  object-fit: contain;       /* Garante que a imagem apareça inteira, sem distorcer ou cortar */
-  margin-bottom: 10px;       /* Cria um espaço entre a imagem e o texto */
-}
-
-/* --- AJUSTE PARA CELULAR --- */
+/* --- AJUSTE PARA CELULAR RIFAS  --- */
 @media (max-width: 768px) {
   .container-rifas {
-    flex-direction: column;   /* Em telas pequenas, coloca os patrocinadores um embaixo do outro */
+    flex-direction: column;   /* Em telas pequenas, coloca as rifas um embaixo do outro */
     align-items: center;      /* Centraliza os blocos na tela */
   }
 
-  .rifasI {
+  .rifa {
     width: 80%;               /* Faz o bloco ocupar 80% da largura da tela */
     max-width: 300px;
   }
 }
+/* --- AJUSTE PARA CELULAR RIFAS  --- */
 
+/* --- AJUSTE PARA CELULAR RIFAS2  --- */
+
+@media (max-width: 768px) {
+  .container-rifas2 {
+    flex-direction: column;   /* Em telas pequenas, coloca as rifas um embaixo do outro */
+    align-items: center;      /* Centraliza os blocos na tela */
+  }
+
+  .rifa2 {
+    width: 80%;               /* Faz o bloco ocupar 80% da largura da tela */
+    max-width: 300px;
+  }
+}
+/* --- AJUSTE PARA CELULAR RIFAS2  --- */
+
+
+/* --- Carrosel com as imagens de 2024  --- */
 .carousel-inner{
     width: 100%;
     overflow: hidden;
@@ -163,14 +317,7 @@ figcaption{
     width: 99%;
     flex: 0 0 100%;
 }
-body {
-min-height: 100vh;
-margin: 0;
-padding: 0;
-background-image: url(../parede.jpg);
-background-position: center;
-background-size: none; /* se quiser a imagem de fundo ocupando toda a tela */
-}
+/* --- Carrosel com as imagens de 2024  --- */
 
  .agradecimento {
   text-align: center;
@@ -181,7 +328,7 @@ background-size: none; /* se quiser a imagem de fundo ocupando toda a tela */
   margin-bottom: 25px;
   border-radius: 99px;
 } 
-
+/* ---------- AQUI TA NOSSO ESTILO PARA O TEXTO DO MANIFESTO---------- */
  .manifesto {
   text-align: center;
   justify-content: center;
@@ -191,51 +338,16 @@ background-size: none; /* se quiser a imagem de fundo ocupando toda a tela */
   border-radius: 20px;
   margin-top: 25px;
 }
- .batalha {
-        text-align: center;
-        justify-content: center;
-        display: flex;
-        font-style: italic;
-        width: 99%;
-        border-radius: 8px;
- }
+/* ---------- AQUI TA NOSSO ESTILO PARA O TEXTO DO MANIFESTO---------- */
+
+/* --- Carrosel botões de 2024  --- */
  .carousel-control-next {
     background-color: #ffee00;
  }
  .carousel-control-prev {
     background-color: #ffee00;
  }
-
- .resistencia {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
-
- }
- .resistencia strong {
-display: block;
-margin-bottom: 10px;
-background-color: #ffee00;
-font-style: italic;
-}
- .resistencia button {
-padding: 10px;
-font-size: 16px;
-background-color: #ffee00;
-color: #030303;
-border: none;
-cursor: pointer;
-border-radius: 5px;
-font-style: italic;
-height: 35px;
-}
- .resistencia button:hover {
-    background-color: #ffee00;
-    transform: scale(1.05);
-    transition: transform 0.3s;
- }
+/* --- Carrosel botões de 2024  --- */
 
  /* Estilo dos títulos */
 .paragrafo h2.titulo {
@@ -247,7 +359,7 @@ height: 35px;
     transition: color 0.3s ease; /* Transição suave para cor */
 }
 
-/* ---------- PARÁGRAFO / CAIXA DE TEXTO ---------- */
+/* ---------- PARÁGRAFO / CAIXA DE TEXTO  DO MANIFESTO DIVIDIDO POR PARTES---------- */
 .paragrafo {
 font-family: Arial, sans-serif;
 text-align: justify;
@@ -278,6 +390,7 @@ width: fit-content;
 .paragrafo h2.titulo:hover {
 color: #fd0101;
 }
+/* ---------- PARÁGRAFO / CAIXA DE TEXTO  DO MANIFESTO DIVIDIDO POR PARTES---------- */
 
 /* regra genérica para parágrafos soltos (ajustada) */
 p{
@@ -291,7 +404,7 @@ padding: 20px;
 border-radius: 8px;
 }
 
-/* ---------- CONTAINER PRINCIPAL COM IMAGENS E CONTEÚDO ---------- */
+/* ---------- CONTAINER PRINCIPAL É A PARTE DO MANIFESTO COM O PUNHO ---------- */
 .container-completo {
 max-width: var(--container-max);
 margin: 0 auto;
@@ -315,8 +428,9 @@ border-radius: var(--card-radius);
 display: block;
 overflow: hidden;
 }
+/* ---------- CONTAINER PRINCIPAL É A PARTE DO MANIFESTO COM O PUNHO ---------- */
 
-/* se quiser que logos não sejam cortados, adicione .imagem-lateral.logo { object-fit: contain; background:#fff; } */
+/* ---------- ESTILO DO FUNDOS 2024, REFERENTE RIFA---------- */
 
 .fundos {
 border-radius: 50px;
@@ -324,6 +438,7 @@ margin-top: 25px;
 max-width: 100%;
 overflow: hidden;
 }
+/* ---------- ESTILO DO FUNDOS 2024, REFERENTE RIFA---------- */
 
 /* ---------- INFO/DOWNLOAD & COLUNAS ---------- */
 .info-download {
@@ -360,18 +475,18 @@ flex-direction: column;
 align-items: center;
 }
 
-/* imagem manual agora responsiva e mantendo proporção */
+/* imagem manual responsiva e mantendo proporção */
 .imagem-manual {
 width: 100%;
 max-width: 300px;
 height: auto;
-aspect-ratio: 4 / 3; /* navegador moderno usa isso */
+aspect-ratio: 4 / 3; /*  moderno */
 object-fit: cover;
 border-radius: 8px;
 margin-bottom: 10px;
 }
 
-/* botão com contraste melhor e padding consistente */
+/* ESTILO DO NOSSO BOTÃO DE FUMAR  */
 .botao-fumar {
 background-color: #4CAF50;
 color: #fff; /* alterado para contraste */
@@ -385,7 +500,9 @@ transition: background-color 0.3s ease;
 .botao-fumar:hover {
 background-color: #388e3c;
 }
+/* ESTILO DO NOSSO BOTÃO DE FUMAR  */
 
+/* VO DEIXAR, MAS PRECISO VERIFICAR  */
 .link-email {
 color: #4CAF50;
 text-decoration: none;
@@ -395,169 +512,9 @@ font-weight: bold;
 .link-email:hover {
 text-decoration: underline;
 }
+/* VO DEIXAR, MAS PRECISO VERIFICAR  */
 
-/* ---------- LAYOUT DE LISTA E CAIXA DE IMAGEM (outra seção) ---------- /
-/ Limpei o comentário inválido que havia no seu CSS original */
-
-.container-principal {
-display: flex;
-flex-wrap: wrap;
-align-items: flex-start;
-justify-content: space-between;
-margin-top: 20px;
-gap: var(--gap);
-}
-
-.caixa-imagem {
-flex: 1 1 420px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.caixa-imagem img {
-width: 100%;
-max-width: 500px;
-height: auto;
-max-height: 400px; /* evita imagens gigantes */
-object-fit: cover;
-border-radius: 10px;
-display: block;
-}
-
-.caixa-lista {
-flex: 1 1 300px;
-display: flex;
-align-items: flex-start;
-justify-content: center;
-gap: 16px;
-}
-
-.caixa-lista h3 {
-background-color: var(--accent-yellow);
-padding: 10px;
-border-radius: 8px;
-}
-
-.caixa-lista ol {
-padding-left: 20px;
-background-color: var(--muted-bg);
-padding: 15px;
-border-radius: 8px;
-}
-
-/* estilo para "Outras" */
-.Outras{
-background-color: var(--accent-yellow);
-padding: 10px;
-border-radius: 8px;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-/* ---------- MEDIA QUERIES (responsividade) ---------- */
-@media (max-width: 1024px) {
-.imagem-lateral {
-width: 200px;
-height: 200px;
-flex: 0 0 200px;
-}
-
-.caixa-imagem img {
-max-height: 320px;
-}
-}
-
-@media (max-width: 768px) {
-.container-completo {
-flex-direction: column;
-align-items: center;
-padding: 20px;
-gap: 20px;
-}
-
-.imagem-lateral {
-width: 90%;
-max-width: 320px;
-height: auto; /* deixa a altura natural no celular */
-aspect-ratio: 4/3;
-}
-
-.paragrafo {
-font-size: 16px;
-padding: 10px;
-}
-
-.container-principal, .info-download {
-flex-direction: column;
-gap: 16px;
-}
-
-.caixa-imagem {
-margin-right: 0;
-}
-}
-
-#contador-titulo {
-  text-align: center;          /* Alinha texto à esquerda */
-  margin-left: 0 auto;            /* Gruda na esquerda do container */
-  margin-right: 100px;
-  font-style: italic;
-  background-color: #ffee00;
-  margin-top: 15px;
-  border-radius: 10px;
-}
-
-#timer {
-
-  font-size: 2.7em;         /* Torna os números grandes: ajuste como desejar */
-  font-weight: bold;        /* Destaque igual ao visual da imagem */
-  color: #45f300;              /* Fica bem nítido sobre o fundo branco */
-  letter-spacing: 7px;
-  text-align: center;
-  font-family: 'Montserrat', Arial, sans-serif;
-  margin-top: 75px;
-  margin-right: 75px;
-  background-color: #ffee00;
-  border-radius: 10px;
-  padding: 8px 16px;
-  color: #222;
-  display: inline-block;
-
-}
-
-.tema-evento {
-    background-color: #f6e05e;
-    color: #143d24;
-    border-radius: 60px;
-    padding: 12px 0;
-    font-size: 1.2em;
-    text-align: center;
-    margin-left: 50px;
-    margin-top: 35px;
-    margin-right: 0 ;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    font-weight: bold;
-}
-
-
-.event {
-    list-style: none;
-    padding: 0;
-    margin-right: 175px;
-    text-align: center;
-    font-size: 1.1em;
-    color: #3bb7d6;
-    background-color: #f6e05e;
-    color: #143d24;
-    border-radius: 60px;
-}
-
-.events li {
-    margin: 200px 0;
-    font-weight: bold;
-}
+/* ESTILO DO NOSSO FOOTER  */
 
 #contato-footer {
   display: flex;
@@ -574,25 +531,7 @@ margin-right: 0;
   align-items: center;
   gap: 27px;
 }
-
-.icon-main {
-  width: 48px;
-  height: 48px;
-  filter: grayscale(1) brightness(99);
-  transition: filter .2s;
-}
-
-.icon-main:hover {
-  filter: none;
-}
-
-.icon-pix {
-  width: 28px;
-  height: 28px;
-  opacity: 0.75;
-  vertical-align: middle;
-}
-
+/* ESTILO DO NOSSO FOOTER  */
 @media (max-width: 900px) {
   #contato-footer {
     flex-direction: column;
@@ -600,10 +539,11 @@ margin-right: 0;
     align-items: center;
   }
 }
+/* ESTILO DO NOSSO FOOTER  */
 
-
+/* NOSSO QUADRADO QUE ARMAZENA OS ICONES */
 .white-box {
-  width: 1100px;    /* ou o valor equivalente ao do retângulo azul da imagem */
+  width: 1100px;    /* NOSSO QUADRADO QUE ARMAZENA OS ICONES */
   height: 300px;   /* ajuste conforme o modelo */
   background: #fff;
   border-radius: 20px;
@@ -616,6 +556,7 @@ margin-right: 0;
   padding: 32px 36px;
 }
 
+/* NOSSOS ICONES DE CONTATO */
 .icons-grid {
   display: flex;
   flex-direction: column;
@@ -674,6 +615,8 @@ margin-right: 0;
   height: 40px;
 }
 
+/* NOSSOS ICONES DE CONTATO */
+
 .desc-link {
   margin-top: 2px;
   color: #246DC7;        /* Azul chamativo para o link */
@@ -685,7 +628,7 @@ margin-right: 0;
 .desc-link:hover {
   color: #133a5f;
 }
-
+/* RESPONSIVIDADE ICONES DE CONTATO */
 @media (max-width: 650px) {
   .icon-grid {
     grid-template-columns: repeat(2, 110px);
@@ -707,4 +650,90 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 10px;
   padding: 5px 10px;
   width: fit-content;
+}
+
+
+
+.info-grid-wrapper {
+    position: relative; 
+    width: 100%;
+    max-width: 900px; /* Largura máxima para o bloco dos retângulos no desktop */
+    margin: 40px auto; /* Centraliza o bloco e dá espaço em cima e embaixo */
+    display: grid; /* Grid para facilitar o layout 2x2 */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 60px;
+    padding: 10px;
+}
+
+/* Info-box para funcionar dentro do Grid */
+.info-box {
+    position: relative; 
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    background-color: #278546;
+    color: #333;
+    padding: 50px;
+    border: 4px solid #f2c601; /* Borda que você já usa */
+    min-height: 100px; /* Altura mínima para ficar uniforme */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px; /* Bordas arredondadas */
+}
+
+/* TRANS */
+.info-box:hover {
+    transform: scale(1.05);
+}
+
+.info-box span {
+    display: block;
+    width: 100%;
+    transition: transform 0.4s ease-in-out;
+    text-align: center;
+    font-size: 1.1em; /* Aumenta um pouco o tamanho da fonte */
+    font-weight: 700;  /* Deixa a fonte mais "gorda" (bold) */
+    color: #1a1a1a;     /* Um preto suave, que é melhor que o preto puro (#000) */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra sutil para "descolar" o texto do fundo */
+}
+
+.info-box .conteudo {
+    transform: translateY(100%);
+    position: absolute;
+    left: 0;
+    top: 15px;
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-box.ativo .capa {
+    transform: translateY(-100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e5ff00;
+}
+
+.info-box.ativo .conteudo {
+    transform: translateY(0);
+}
+
+
+/* --- AJUSTE NA MEDIA QUERY PARA CELULAR ANIMAÇÃO DOS TEMAS --- */
+@media (max-width: 768px) {
+    .info-grid-wrapper {
+        grid-template-columns: 1fr; /* No celular, uma única coluna */
+    }
+}
+
+.capa {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3); /* Sombra para dar profundidade */
+  background-color: #ffee00; /* Mesma cor de fundo dos outros textos */
+  padding: 15px;
 }
