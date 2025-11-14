@@ -556,25 +556,46 @@ text-decoration: underline;
   padding: 32px 36px;
 }
 
+/* Regras para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+  .white-box {
+    flex-direction: column; /* Faz a imagem e os ícones ficarem em coluna */
+    height: auto;           /* Altura automática para caber o conteúdo */
+    width: 90%;             /* Usa 90% da largura da tela */
+    padding: 20px;
+  }
+}
+
 /* NOSSOS ICONES DE CONTATO */
 .icons-grid {
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: center;
-  margin-right: 90px;
+  margin-right: 0;
+}
+
+/* Ajuste adicional para celulares bem pequenos */
+@media (max-width: 480px) {
+  .icon-grid {
+    /* Mantém 2 colunas como você já fez, mas com um espaçamento um pouco menor */
+    grid-template-columns: repeat(2, 1fr); /* 1fr faz as colunas dividirem o espaço igualmente */
+    grid-gap: 20px;
+  }
 }
 
 .marcha-image {
-  flex: 0 0 250px;
+
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   height: 100%;
+  width: 100%;            /* Ocupa toda a largura do .white-box */
 }
+
 .marcha-image img {
-  width: 600px;
-  height: 275px;
+  width: 100%;            /* Imagem se ajusta ao contêiner */
+  height: auto;           /* Altura se ajusta proporcionalmente */
   border-radius: 15px;
   box-shadow: 0 1px 7px rgba(0,0,0,0.09);
 }
@@ -593,6 +614,17 @@ text-decoration: underline;
   align-items: center;
 }
 
+/* Estilo para o ícone escondido DO GIT */
+.hidden-icon {
+  opacity: 0; /* Começa totalmente invisível */
+  transition: opacity 0.4s ease-in-out; /* Efeito suave de transição */
+}
+
+/* Quando o mouse passar por cima da grade de ícones, o  escondido aparece */
+.hidden-icon:hover {
+  opacity: 1; /* Fica totalmente visível */
+}
+
 /* quadrado vermelho dos ícones */
 .icon-link {
   display: flex;
@@ -606,7 +638,7 @@ text-decoration: underline;
   transition: .99s;
 }
 .icon-link:hover {
-  background: #B92F2F; /* tom mais escuro ao passar o mouse */
+  background: #01f70e; /* tom mais escuro ao passar o mouse */
 }
 
 /* ícone dentro do quadrado */

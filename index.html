@@ -201,39 +201,42 @@ Basta clicar na imagem abaixo ou acompanhar pelo link exclusivo da nossa rifa pe
       <a href="https://www.instagram.com/marchadamaconhadiadema?igsh=MXR6Z3g0ZTk5cWF6cg==" class="icon-link">
         <img src="icones/instagram.svg" alt="Instagram">
       </a>
-      <a href="link1.html" class="desc-link">Instagram</a>
+      <a href="https://www.instagram.com/marchadamaconhadiadema?igsh=MXR6Z3g0ZTk5cWF6cg==" class="desc-link">Instagram</a>
     </div>
     <!-- Gmail da marcha 2025 -->
     <div class="icon-item">
-      <a href="link2.html" class="icon-link" aria-label="Descrição 2">
+      <a href="mailto:marchadamaconha@gmail.com" class="icon-link" aria-label="Enviar um e-mail para a Marcha">
         <img src="icones/gmail.svg" alt="Gmail da Marcha">
       </a>
-      <a href="marchadamaconha@gamil.com" class="desc-link">Gmail</a>
+      <a href="mailto:marchadamaconha@gmail.com" class="desc-link">Gmail</a>
     </div>
     <!-- Link com icone para o whats da marcha 2025 -->
     <div class="icon-item">
-      <a href="https://chat.whatsapp.com/Iz4Sl16ESvvBbysDOfrukr?mode=wwt" class="icon-link" aria-label="Descrição 3">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScxR-Sa2iiq6oSFaqUzaTuVeGC0Q2FMBMO-XIuIhXveeiXa1g/viewform?usp=dialog" class="icon-link" aria-label="Formulario Grupo whatsapp">
         <img src="icones/whatsapp.svg" alt="Grupo whatsapp">
       </a>
-      <a href="link3.html" class="desc-link">Grupo whatsapp</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScxR-Sa2iiq6oSFaqUzaTuVeGC0Q2FMBMO-XIuIhXveeiXa1g/viewform?usp=dialog" class="desc-link">Grupo whatsapp</a>
     </div>
     <!-- Formulario dos Artistas de Diadema -->
     <div class="icon-item">
-      <a href="link4.html" class="icon-link" aria-label="Descrição 4">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScHo_5kmZgmBaWzTZF0iHVgLujNeIbXNZR7BGLo7-MMco1mOg/viewform?usp=publish-editor" class="icon-link" aria-label="Formulario Artistas 2025">
         <img src="icones/form.svg" alt="Formulario para participar como artista na marcha">
       </a>
-      <a href="link4.html" class="desc-link2">Formulario Artistas</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScHo_5kmZgmBaWzTZF0iHVgLujNeIbXNZR7BGLo7-MMco1mOg/viewform?usp=publish-editor" class="desc-link2">Formulario Artistas</a>
     </div>
-    <!-- Pix da marcha 2025 icone  -->
+    <!-- Pix da marcha 2025 icone -->
     <div class="icon-item">
-      <a href="link5.html" class="icon-link" aria-label="Descrição 5">
+      <!-- Adicionamos o onclick para chamar nossa função JS -->
+      <a href="javascript:void(0);" onclick="copiarPix()" class="icon-link" aria-label="Copiar chave Pix para doação">
         <img src="icones/pix.svg" alt="Pix da marcha">
       </a>
-      <a href="link5.html" class="desc-link">Pix</a>
-    </div>
+      <!-- Adicionamos um ID para podermos mudar o texto via JS -->
+      <a href="javascript:void(0);" onclick="copiarPix()" class="desc-link" id="pix-link">Pix</a>
+</div>
+
     <!-- Git Hub escondido -->
-    <div class="icon-item">
-      <a href="link6.html" class="icon-link" aria-label="Descrição 6">
+    <div class="icon-item hidden-icon"> <!-- << AQUI NOSSO GITHUB ESCONDIDO -->
+      <a href="link6.html" class="icon-link" aria-label="GIT HUB DO LOURENCOEK">
         <img src="icones/github.svg" alt="Git sairu">
       </a>
       <a href="link6.html" class="desc-link">Git do sairu</a>
@@ -243,6 +246,7 @@ Basta clicar na imagem abaixo ou acompanhar pelo link exclusivo da nossa rifa pe
 
 </footer>
   <!-- Scripts das funções esconde, tempo e baixar -->
+  <script src="js/copiarPix.js"></script> 
   <script src="js/script.js"></script>
   <script src="js/esconde_esconde.js"></script>
   <script src="js/timer.js"></script>
